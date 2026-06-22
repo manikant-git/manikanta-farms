@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('partials/header', { pageTitle, appName }) %>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container nav-bar">
+      <a class="brand" href="/" aria-label="Manikanta Farms home">
+        <span class="brand-mark">MF</span>
+        <span class="brand-text">
+          <strong><%= appName %></strong>
+          <small>Farm-direct produce</small>
+        </span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#products">Products</a>
+        <a href="#why-us">Why us</a>
+        <a href="#contact">Contact</a>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle theme">
+          <span class="theme-toggle-icon">◐</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><%= hero.eyebrow %></p>
+          <h1><%= hero.title %></h1>
+          <p class="hero-description"><%= hero.description %></p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#products">Explore produce</a>
+            <a class="btn btn-secondary" href="#contact">Talk to sales</a>
+          </div>
+
+          <ul class="benefit-list" role="list">
+            <% benefits.forEach((benefit) => { %>
+              <li><%= benefit %></li>
+            <% }) %>
+          </ul>
+        </div>
+
+        <div class="hero-card">
+          <div class="hero-card-top">
+            <span class="pill">This week’s premium box</span>
+            <span class="quality-score">Quality grade A</span>
+          </div>
+
+          <div class="hero-visual">
+            <div class="produce produce-mango"></div>
+            <div class="produce produce-leaf"></div>
+            <div class="produce produce-tomato"></div>
+          </div>
+
+          <div class="hero-card-bottom">
+            <h2>Curated for freshness and repeat buyers</h2>
+            <p>We focus on realistic farm supply, clean presentation, and dependable delivery windows for modern customers.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats-section">
+      <div class="container stats-grid">
+        <% stats.forEach((stat) => { %>
+          <article class="stat-card">
+            <h2><%= stat.value %></h2>
+            <p><%= stat.label %></p>
+          </article>
+        <% }) %>
+      </div>
+    </section>
+
+    <section id="products" class="products-section">
+      <div class="container section-heading">
+        <p class="eyebrow">Featured selection</p>
+        <h2>Fresh inventory for homes and businesses</h2>
+        <p>Static mock product data keeps the app simple while making the UI feel realistic for DevOps and deployment practice.</p>
+      </div>
+
+      <div class="container product-grid">
+        <% featuredProducts.forEach((product) => { %>
+          <article class="product-card">
+            <div class="product-card-header">
+              <span class="pill"><%= product.badge %></span>
+              <span class="product-category"><%= product.category %></span>
+            </div>
+
+            <h3><%= product.name %></h3>
+            <p class="product-description"><%= product.description %></p>
+
+            <div class="product-meta">
+              <div>
+                <span class="meta-label">Origin</span>
+                <strong><%= product.origin %></strong>
+              </div>
+              <div>
+                <span class="meta-label">Price</span>
+                <strong><%= product.pricePerUnit %></strong>
+              </div>
+            </div>
+          </article>
+        <% }) %>
+      </div>
+    </section>
+
+    <section id="why-us" class="why-us-section">
+      <div class="container why-us-grid">
+        <article class="content-panel">
+          <p class="eyebrow">Operations mindset</p>
+          <h2>Built like a practical business website</h2>
+          <p>This project uses a single Express service, mock data, environment-based configuration, clean middleware, and deployable Kubernetes resources.</p>
+        </article>
+
+        <article class="feature-panel">
+          <h3>Good fit for DevOps labs</h3>
+          <ul role="list">
+            <li>Container-ready Node.js app.</li>
+            <li>Health endpoint for probes.</li>
+            <li>Helm values for dev, stage, and prod.</li>
+            <li>Simple CI, PR previews, and CD pipeline design.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <%- include('partials/footer', { company }) %>
+</body>
+</html>
