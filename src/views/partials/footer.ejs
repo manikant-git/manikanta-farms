@@ -1,0 +1,23 @@
+<footer id="contact" class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <h2>Manikanta Farms</h2>
+      <p>Fresh fruits and vegetables sourced from trusted farms and presented with business-ready quality.</p>
+    </div>
+
+    <div>
+      <h3>Contact</h3>
+      <ul role="list" class="footer-list">
+        <li><a href="tel:<%= company.phone.replace(/\s+/g, '') %>"><%= company.phone %></a></li>
+        <li><a href="mailto:<%= company.email %>"><%= company.email %></a></li>
+        <li><span><%= company.location %></span></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>Health endpoint</h3>
+      <p><a href="/health">/health</a></p>
+      <p class="footer-note">Useful for uptime checks, container probes, and load balancer validation.</p>
+    </div>
+  </div>
+</footer>
