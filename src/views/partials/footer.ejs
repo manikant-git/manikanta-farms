@@ -2,11 +2,11 @@
   <div class="container footer-grid">
     <div>
       <h2>Manikanta Farms</h2>
-      <p>Fresh fruits and vegetables sourced from trusted farms and presented with business-ready quality.</p>
+      <p>Fresh fruits and vegetables sourced from trusted farms with care, consistency, and premium quality.</p>
     </div>
 
     <div>
-      <h3>Contact</h3>
+      <h3>Contact us</h3>
       <ul role="list" class="footer-list">
         <li><a href="tel:<%= company.phone.replace(/\s+/g, '') %>"><%= company.phone %></a></li>
         <li><a href="mailto:<%= company.email %>"><%= company.email %></a></li>
@@ -15,9 +15,12 @@
     </div>
 
     <div>
-      <h3>Health endpoint</h3>
-      <p><a href="/health">/health</a></p>
-      <p class="footer-note">Useful for uptime checks, container probes, and load balancer validation.</p>
+      <h3>Business hours</h3>
+      <ul role="list" class="footer-list">
+        <li>Monday - Saturday</li>
+        <li>7:00 AM - 8:00 PM</li>
+        <li>Fresh arrivals daily</li>
+      </ul>
     </div>
   </div>
 </footer>
