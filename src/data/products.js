@@ -1,63 +1,111 @@
 const products = [
   {
     id: 1,
+    slug: 'alphonso-mango',
     name: 'Alphonso Mango',
-    category: 'Seasonal Fruit',
-    pricePerUnit: '₹220 / kg',
+    category: 'Fruit',
+    image: 'https://images.unsplash.com/photo-1553279768-865429fa0078?auto=format&fit=crop&w=900&q=80',
+    unit: 'kg',
+    basePrice: 220,
+    todayPrice: 199,
+    offerLabel: 'Today special',
+    stockQty: 80,
+    minOrderQty: 1,
+    maxOrderQty: 10,
     origin: 'Khammam farms',
-    image:
-      'https://images.unsplash.com/photo-1553279768-865429fa0078?auto=format&fit=crop&w=900&q=80',
-    description: 'Rich aroma, natural sweetness, and premium table quality.'
+    availableToday: true,
+    isFeatured: true,
+    description: 'Naturally ripened premium mangoes with rich aroma and sweetness.'
   },
   {
     id: 2,
+    slug: 'farm-tomato',
     name: 'Farm Tomato',
-    category: 'Fresh Vegetable',
-    pricePerUnit: '₹42 / kg',
+    category: 'Vegetable',
+    image: 'https://images.unsplash.com/photo-1546094096-0df4bcaaa337?auto=format&fit=crop&w=900&q=80',
+    unit: 'kg',
+    basePrice: 42,
+    todayPrice: 36,
+    offerLabel: 'Fresh arrival',
+    stockQty: 140,
+    minOrderQty: 1,
+    maxOrderQty: 25,
     origin: 'Medak growers',
-    image:
-      'https://images.unsplash.com/photo-1546094096-0df4bcaaa337?auto=format&fit=crop&w=900&q=80',
-    description: 'Fresh red tomatoes selected for daily cooking and clean presentation.'
+    availableToday: true,
+    isFeatured: true,
+    description: 'Fresh red tomatoes selected for daily cooking and store display.'
   },
   {
     id: 3,
+    slug: 'leafy-spinach',
     name: 'Leafy Spinach',
     category: 'Leafy Greens',
-    pricePerUnit: '₹28 / bunch',
+    image: 'https://images.unsplash.com/photo-1576045057995-568f588f82fb?auto=format&fit=crop&w=900&q=80',
+    unit: 'bunch',
+    basePrice: 28,
+    todayPrice: 24,
+    offerLabel: 'Morning harvest',
+    stockQty: 60,
+    minOrderQty: 1,
+    maxOrderQty: 15,
     origin: 'Shamshabad farms',
-    image:
-      'https://images.unsplash.com/photo-1576045057995-568f588f82fb?auto=format&fit=crop&w=900&q=80',
-    description: 'Tender bunches with natural freshness for healthy daily meals.'
+    availableToday: true,
+    isFeatured: false,
+    description: 'Tender spinach bunches packed for same-day freshness.'
   },
   {
     id: 4,
+    slug: 'banana-select',
     name: 'Banana Select',
-    category: 'Fresh Fruit',
-    pricePerUnit: '₹68 / dozen',
+    category: 'Fruit',
+    image: 'https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?auto=format&fit=crop&w=900&q=80',
+    unit: 'dozen',
+    basePrice: 68,
+    todayPrice: 62,
+    offerLabel: 'Family value',
+    stockQty: 45,
+    minOrderQty: 1,
+    maxOrderQty: 8,
     origin: 'Chevella farms',
-    image:
-      'https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?auto=format&fit=crop&w=900&q=80',
-    description: 'Naturally ripened bananas with consistent taste and texture.'
+    availableToday: true,
+    isFeatured: true,
+    description: 'Naturally ripened bananas with balanced sweetness and texture.'
   },
   {
     id: 5,
-    name: 'Cucumber',
-    category: 'Fresh Vegetable',
-    pricePerUnit: '₹36 / kg',
-    origin: 'Vikarabad cluster',
-    image:
-      'https://images.unsplash.com/photo-1604977042946-1eecc30f269e?auto=format&fit=crop&w=900&q=80',
-    description: 'Cool, crisp cucumbers for salads, slicing, and fresh meals.'
+    slug: 'sweet-corn',
+    name: 'Sweet Corn',
+    category: 'Vegetable',
+    image: 'https://images.unsplash.com/photo-1551754655-cd27e38d2076?auto=format&fit=crop&w=900&q=80',
+    unit: 'pack',
+    basePrice: 55,
+    todayPrice: 49,
+    offerLabel: 'Limited stock',
+    stockQty: 18,
+    minOrderQty: 1,
+    maxOrderQty: 6,
+    origin: 'Warangal farms',
+    availableToday: true,
+    isFeatured: false,
+    description: 'Tender sweet corn picked for freshness and everyday cooking.'
   },
   {
     id: 6,
-    name: 'Sweet Corn',
-    category: 'Seasonal Vegetable',
-    pricePerUnit: '₹55 / pack',
-    origin: 'Warangal farms',
-    image:
-      'https://images.unsplash.com/photo-1551754655-cd27e38d2076?auto=format&fit=crop&w=900&q=80',
-    description: 'Tender corn cobs with balanced sweetness and good freshness.'
+    slug: 'cucumber',
+    name: 'Cucumber',
+    category: 'Vegetable',
+    image: 'https://images.unsplash.com/photo-1604977042946-1eecc30f269e?auto=format&fit=crop&w=900&q=80',
+    unit: 'kg',
+    basePrice: 36,
+    todayPrice: 36,
+    offerLabel: '',
+    stockQty: 0,
+    minOrderQty: 1,
+    maxOrderQty: 10,
+    origin: 'Vikarabad cluster',
+    availableToday: false,
+    isFeatured: false,
+    description: 'Cool and crisp cucumbers ideal for salads and fresh meals.'
   }
 ];
 
