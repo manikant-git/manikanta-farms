@@ -12,13 +12,13 @@
         <span class="brand-mark">MF</span>
         <span class="brand-text">
           <strong><%= appName %></strong>
-          <small>Farm-direct produce</small>
+          <small>Fresh fruits & vegetables</small>
         </span>
       </a>
 
       <nav class="nav-links" aria-label="Primary">
         <a href="#products">Products</a>
-        <a href="#why-us">Why us</a>
+        <a href="#about">About</a>
         <a href="#contact">Contact</a>
         <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle theme">
           <span class="theme-toggle-icon">◐</span>
@@ -29,81 +29,58 @@
 
   <main id="main-content">
     <section class="hero-section">
-      <div class="container hero-grid">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
         <div class="hero-copy">
           <p class="eyebrow"><%= hero.eyebrow %></p>
           <h1><%= hero.title %></h1>
           <p class="hero-description"><%= hero.description %></p>
 
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#products">Explore produce</a>
-            <a class="btn btn-secondary" href="#contact">Talk to sales</a>
+            <a class="btn btn-primary" href="#products">Shop fresh produce</a>
+            <a class="btn btn-secondary" href="#about">Discover our farms</a>
           </div>
 
-          <ul class="benefit-list" role="list">
-            <% benefits.forEach((benefit) => { %>
-              <li><%= benefit %></li>
+          <div class="trust-strip">
+            <% trustPoints.forEach((point) => { %>
+              <span><%= point %></span>
             <% }) %>
-          </ul>
-        </div>
-
-        <div class="hero-card">
-          <div class="hero-card-top">
-            <span class="pill">This week’s premium box</span>
-            <span class="quality-score">Quality grade A</span>
-          </div>
-
-          <div class="hero-visual">
-            <div class="produce produce-mango"></div>
-            <div class="produce produce-leaf"></div>
-            <div class="produce produce-tomato"></div>
-          </div>
-
-          <div class="hero-card-bottom">
-            <h2>Curated for freshness and repeat buyers</h2>
-            <p>We focus on realistic farm supply, clean presentation, and dependable delivery windows for modern customers.</p>
           </div>
         </div>
-      </div>
-    </section>
-
-    <section class="stats-section">
-      <div class="container stats-grid">
-        <% stats.forEach((stat) => { %>
-          <article class="stat-card">
-            <h2><%= stat.value %></h2>
-            <p><%= stat.label %></p>
-          </article>
-        <% }) %>
       </div>
     </section>
 
     <section id="products" class="products-section">
-      <div class="container section-heading">
-        <p class="eyebrow">Featured selection</p>
-        <h2>Fresh inventory for homes and businesses</h2>
-        <p>Static mock product data keeps the app simple while making the UI feel realistic for DevOps and deployment practice.</p>
+      <div class="container section-intro">
+        <p class="section-label">Featured collection</p>
+        <h2>Freshly selected for everyday quality</h2>
+        <p>Explore premium fruits and vegetables sourced from trusted farms and chosen for freshness, appearance, and taste.</p>
       </div>
 
       <div class="container product-grid">
-        <% featuredProducts.forEach((product) => { %>
+        <% products.forEach((product) => { %>
           <article class="product-card">
-            <div class="product-card-header">
-              <span class="pill"><%= product.badge %></span>
-              <span class="product-category"><%= product.category %></span>
+            <div class="product-image-wrap">
+              <img
+                src="<%= product.image %>"
+                alt="<%= product.name %>"
+                class="product-image"
+                loading="lazy"
+              />
             </div>
 
-            <h3><%= product.name %></h3>
-            <p class="product-description"><%= product.description %></p>
-
-            <div class="product-meta">
-              <div>
-                <span class="meta-label">Origin</span>
-                <strong><%= product.origin %></strong>
+            <div class="product-content">
+              <div class="product-topline">
+                <span class="product-category"><%= product.category %></span>
+                <span class="product-price"><%= product.pricePerUnit %></span>
               </div>
-              <div>
-                <span class="meta-label">Price</span>
-                <strong><%= product.pricePerUnit %></strong>
+
+              <h3><%= product.name %></h3>
+              <p class="product-description"><%= product.description %></p>
+
+              <div class="product-origin">
+                <span>Origin</span>
+                <strong><%= product.origin %></strong>
               </div>
             </div>
           </article>
@@ -111,23 +88,47 @@
       </div>
     </section>
 
-    <section id="why-us" class="why-us-section">
-      <div class="container why-us-grid">
-        <article class="content-panel">
-          <p class="eyebrow">Operations mindset</p>
-          <h2>Built like a practical business website</h2>
-          <p>This project uses a single Express service, mock data, environment-based configuration, clean middleware, and deployable Kubernetes resources.</p>
-        </article>
+    <section id="about" class="about-section">
+      <div class="container about-grid">
+        <div class="about-image-card">
+          <img
+            src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1200&q=80"
+            alt="Fresh green farm field"
+            loading="lazy"
+          />
+        </div>
 
-        <article class="feature-panel">
-          <h3>Good fit for DevOps labs</h3>
-          <ul role="list">
-            <li>Container-ready Node.js app.</li>
-            <li>Health endpoint for probes.</li>
-            <li>Helm values for dev, stage, and prod.</li>
-            <li>Simple CI, PR previews, and CD pipeline design.</li>
-          </ul>
-        </article>
+        <div class="about-content">
+          <p class="section-label">About Manikanta Farms</p>
+          <h2><%= story.title %></h2>
+          <p><%= story.description %></p>
+
+          <div class="feature-list">
+            <% features.forEach((feature) => { %>
+              <article class="feature-item">
+                <h3><%= feature.title %></h3>
+                <p><%= feature.description %></p>
+              </article>
+            <% }) %>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonial-section">
+      <div class="container section-intro">
+        <p class="section-label">Customer trust</p>
+        <h2>What customers say about us</h2>
+      </div>
+
+      <div class="container testimonial-grid">
+        <% testimonials.forEach((item) => { %>
+          <article class="testimonial-card">
+            <p class="testimonial-quote">“<%= item.quote %>”</p>
+            <h3><%= item.name %></h3>
+            <span><%= item.role %></span>
+          </article>
+        <% }) %>
       </div>
     </section>
   </main>
