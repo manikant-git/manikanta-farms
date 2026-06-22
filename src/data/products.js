@@ -1,75 +1,63 @@
 const products = [
   {
     id: 1,
-    name: 'Premium Alphonso Mango',
-    category: 'Fruit',
+    name: 'Alphonso Mango',
+    category: 'Seasonal Fruit',
     pricePerUnit: '₹220 / kg',
-    origin: 'Nuzvid partner farms',
-    badge: 'Best seller',
-    description: 'Sweet, aromatic mangoes selected for rich pulp and premium table quality.'
+    origin: 'Khammam farms',
+    image:
+      'https://images.unsplash.com/photo-1553279768-865429fa0078?auto=format&fit=crop&w=900&q=80',
+    description: 'Rich aroma, natural sweetness, and premium table quality.'
   },
   {
     id: 2,
-    name: 'Farm Fresh Tomato',
-    category: 'Vegetable',
+    name: 'Farm Tomato',
+    category: 'Fresh Vegetable',
     pricePerUnit: '₹42 / kg',
-    origin: 'Medak farm belt',
-    badge: 'Daily harvest',
-    description: 'Firm red tomatoes ideal for curries, salads, and bulk kitchen use.'
+    origin: 'Medak growers',
+    image:
+      'https://images.unsplash.com/photo-1546094096-0df4bcaaa337?auto=format&fit=crop&w=900&q=80',
+    description: 'Fresh red tomatoes selected for daily cooking and clean presentation.'
   },
   {
     id: 3,
-    name: 'Residue-aware Spinach',
-    category: 'Leafy greens',
+    name: 'Leafy Spinach',
+    category: 'Leafy Greens',
     pricePerUnit: '₹28 / bunch',
-    origin: 'Shamshabad growers',
-    badge: 'Morning cut',
-    description: 'Tender spinach bunches cleaned and packed for same-day freshness.'
+    origin: 'Shamshabad farms',
+    image:
+      'https://images.unsplash.com/photo-1576045057995-568f588f82fb?auto=format&fit=crop&w=900&q=80',
+    description: 'Tender bunches with natural freshness for healthy daily meals.'
   },
   {
     id: 4,
-    name: 'Naturally Ripened Banana',
-    category: 'Fruit',
+    name: 'Banana Select',
+    category: 'Fresh Fruit',
     pricePerUnit: '₹68 / dozen',
-    origin: 'Khammam farms',
-    badge: 'Family pack',
-    description: 'Consistent texture and sweetness, suitable for homes and juice counters.'
+    origin: 'Chevella farms',
+    image:
+      'https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?auto=format&fit=crop&w=900&q=80',
+    description: 'Naturally ripened bananas with consistent taste and texture.'
   },
   {
     id: 5,
-    name: 'Crunchy Cucumber',
-    category: 'Vegetable',
+    name: 'Cucumber',
+    category: 'Fresh Vegetable',
     pricePerUnit: '₹36 / kg',
-    origin: 'Chevella cluster',
-    badge: 'Hydrating',
-    description: 'Fresh cucumbers with crisp bite, ideal for salads and retail display.'
+    origin: 'Vikarabad cluster',
+    image:
+      'https://images.unsplash.com/photo-1604977042946-1eecc30f269e?auto=format&fit=crop&w=900&q=80',
+    description: 'Cool, crisp cucumbers for salads, slicing, and fresh meals.'
   },
   {
     id: 6,
-    name: 'Sweet Corn Cobs',
-    category: 'Vegetable',
+    name: 'Sweet Corn',
+    category: 'Seasonal Vegetable',
     pricePerUnit: '₹55 / pack',
     origin: 'Warangal farms',
-    badge: 'Seasonal',
-    description: 'Tender corn cobs picked for sweetness and quick cooking performance.'
-  },
-  {
-    id: 7,
-    name: 'Guava Select',
-    category: 'Fruit',
-    pricePerUnit: '₹90 / kg',
-    origin: 'Mahabubnagar orchards',
-    badge: 'Vitamin-rich',
-    description: 'Firm and fragrant guavas selected for daily fruit bowls and juice use.'
-  },
-  {
-    id: 8,
-    name: 'Country Brinjal',
-    category: 'Vegetable',
-    pricePerUnit: '₹48 / kg',
-    origin: 'Vikarabad growers',
-    badge: 'Chef choice',
-    description: 'Glossy brinjals suited for curries, roasting, and stuffing recipes.'
+    image:
+      'https://images.unsplash.com/photo-1551754655-cd27e38d2076?auto=format&fit=crop&w=900&q=80',
+    description: 'Tender corn cobs with balanced sweetness and good freshness.'
   }
 ];
 
