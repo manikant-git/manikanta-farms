@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('partials/header', { pageTitle, appName: 'Manikanta Farms' }) %>
+</head>
+<body>
+  <main class="not-found-page">
+    <section class="not-found-card">
+      <p class="eyebrow">404 error</p>
+      <h1>We could not find that page.</h1>
+      <p>The requested path <code><%= requestedPath %></code> does not exist on this service.</p>
+      <a class="btn btn-primary" href="/">Back to homepage</a>
+    </section>
+  </main>
+</body>
+</html>
